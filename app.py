@@ -45,7 +45,7 @@ if uploaded_file is not None:
 
     if raw_text:
         st.subheader("📑 Extracted Text (Preview)")
-        st.text_area("PDF Text", raw_text[:1000] + "...", height=200)
+        st.text_area("PDF Text", f'{raw_text[:1000]}...', height=200)
 
         if st.button("📝 Generate Summary"):
             with st.spinner("Generating summary using OpenAI..."):
